@@ -13,6 +13,10 @@ public class LeetCode106 {
         for(int temp :list){
             System.out.print(temp+"\t");
         }
+        ArrayList<Integer> list2 = inorder(head);
+        for(int temp :list2){
+            System.out.print(temp+"\t");
+        }
     }
     public static TreeNode buildTree(int[] inorder, int[] postorder) {
         HashMap<Integer, Integer> map = new HashMap<>();
@@ -48,6 +52,22 @@ public class LeetCode106 {
             if(head.left!=null){
                 s1.add(head.left);
             }
+        }
+        return list;
+    }
+    public static ArrayList<Integer> inorder(TreeNode root){
+        ArrayList<Integer> list = new ArrayList<>();
+        if(root==null)
+            return list;
+        Stack<TreeNode> s1 = new Stack<>();
+        while(root!=null||!s1.isEmpty()){
+            while(root!=null){
+                s1.push(root);
+                root=root.left;
+            }
+            TreeNode top = s1.pop();
+            list.add(top.val);
+            root=top.right;
         }
         return list;
     }

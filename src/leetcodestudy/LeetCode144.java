@@ -13,7 +13,6 @@ public class LeetCode144 {
         if(root==null)
             return list;
         Stack<TreeNode> s1 = new Stack<>();
-        Stack<TreeNode> s2 = new Stack<>();
         s1.push(root);
         while(!s1.isEmpty()){
             TreeNode head = s1.pop();
