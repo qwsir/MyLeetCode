@@ -46,4 +46,17 @@ public class LeetCode24 {
         return root.next;
     }
 }
+/**
+ //        版本二  头插法的版本
+ //        while(count-->0){
+ //            int num = in.nextInt();
+ //           if(head==null){
+ //                head.value = num;
+ //           }else{
+ //               ListNode newnode = new ListNode(num);
+ //               newnode.next = head.next;
+ //               head.next = newnode;
+ //           }
+ //        }
+ **/
 
