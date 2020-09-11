@@ -29,5 +29,4 @@ public class LeetCodeCoins {
         }
         return dp[row-1][n];
     }
-
 }
