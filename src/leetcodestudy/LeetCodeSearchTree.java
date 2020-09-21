@@ -7,6 +7,7 @@ public class LeetCodeSearchTree {
     public static void main(String[] args) {
 
     }
+    //面试题 04.05. 合法二叉搜索树
     //思路1：二叉搜索树的中序遍历为递增序列
     public boolean isValidBST(TreeNode root) {
         ArrayList<Integer> list = new ArrayList<>();
