@@ -4,14 +4,13 @@ import java.util.HashMap;
 
 public class LeetCode76 {
     public static void main(String[] args) {
-       String S = "ADOBECODEBANC", T = "ABC";
+       String S = "FFADOBECODEBANC", T = "ABC";
        System.out.println(minWindow(S,T));
     }
     public static String minWindow(String s, String t) {
         int left=0, right=0;
         int min_len=Integer.MAX_VALUE;   //用于判断符合条件的子串的最小长度
         String minStr="";                //记录最小子串
-
         //记录每个字符出现的次数，并用于判断是否包含子串
         HashMap<Character, Integer> map = new HashMap<>();
         char[] t_char = t.toCharArray();
