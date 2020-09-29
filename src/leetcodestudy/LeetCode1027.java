@@ -1,10 +1,11 @@
 package leetcodestudy;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class LeetCode1027 {
     public static void main(String[] args) {
-        int[] array = {20,1,15,3,10,5,8};
+        int[] array = {83,20,17,43,52,78,68,45};
         System.out.println(longestArithSeqLength(array));
     }
     public static int longestArithSeqLength(int[] A) {
