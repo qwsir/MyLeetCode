@@ -1,11 +1,10 @@
 package leetcodestudy;
 
 import java.util.HashMap;
-import java.util.Map;
 
 public class LeetCode1027 {
     public static void main(String[] args) {
-        int[] array = {83,20,17,43,52,78,68,45};
+        int[] array = {20,1,15,3,10,5,8};
         System.out.println(longestArithSeqLength(array));
     }
     public static int longestArithSeqLength(int[] A) {
@@ -22,6 +21,7 @@ public class LeetCode1027 {
                 int num = A[j] - A[i];  //查看两元素之间的差值
                 if(dp[j].containsKey(num)){
                     dp[i].put(num,dp[j].getOrDefault(num,0)+1);
+                    System.out.println(A[j] +"<--->"+ A[i]+"--->"+dp[i].get(num));
                 }else{
                     dp[i].put(num,2);
                 }
