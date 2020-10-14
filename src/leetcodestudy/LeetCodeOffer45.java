@@ -18,7 +18,7 @@ public class LeetCodeOffer45 {
         for(int num : nums)
             list.add(String.valueOf(num));
         Collections.sort(list, (o1, o2) -> (o1+""+o2).compareTo(o2+""+o1));
-        StringBuilder newString = new StringBuilder("");
+        StringBuilder newString = new StringBuilder();
         for(String temp : list)
             newString.append(temp);
         return newString.toString();
